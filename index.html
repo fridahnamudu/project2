@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang ="en-us">
+<head>
+  <title>my second ip</title>
+  <meta name="description" content="Akan website">
+  <meta name="author" content="Fridah Joy Namudu">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+    body {
+      background-image: 
+      url('africa.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+ <body>
+  <div class="container"></div> 
+    <div class="test box">
+      <h1 style= background-color:white;font-size:50px:>AKAN NAMES</h1>
+    </div>
+    <h2 style="background-color:white;font-size: 50px;">What is the application about?</h2>
+    <p style="color: black;font-size: 40px;">This application is mainly concerned in assigning the Akan names for various
+      birthdate and gender</p>
+    <h2 style="font-weight: bolder;"> Fill the form below</h2>
+    <form style="background-color:white;font-weight: bolder;">
+      <input type ="radio" id ="male" name ="gender value ="male">
+      <label for = "male"> male </label><br>
+      <input type ="radio" id ="female" name ="gender" value ="female">
+      <label for = "female"> female </label><br>
+      
+      <script>
+       function myFunction() {
+         month = document.form.month.selectedIndex;
+         month = document.form.month.options[month].value;
+         day = document.form.day.selectedIndex;
+         day = document.form.day.options[day].value;
+         year = document.form.year.value;
+         var dob = month + " " + day + ", " + year;
+         var then = new Date(dob);
+         var theday = then.getDay()+1;
+         var date=then.getDate();
+         var year=then.getYear();
+         if (year<100) year="19" + then.getYear();
+         else year=then.getYear();
+         var akanBoy = new Array(6);
+         akanBoy[1]="Kwasi";
+         akanBoy[2]="Kwadwo";
+         akanBoy[3]="Kwabena";
+         akanBoy[4]="Kwaku";
+         akanBoy[5]="Yaw";
+         akanBoy[6]="Kofi";
+         akanBoy[7]="Kwame";
+         var akangirl = new Array(6)
+         akangirl[1]="Akosua"
+         akangirl[2]="Adwoa"
+         akangirl[3]="Abenaa"
+         akangirl[4]="Akua"
+         akangirl[5]="Yaa"
+         akangirl[6]="Afua"
+         akangirl[7]="Aman"
+         if (day != date) alert("Sorry!  That appears to be an invalid date!");
+         else  {
+         dayborn = akanBoy[theday];
+         } alert ("Your akan name is" + dayborn);
+         if (day != date) alert("Sorry!  That appears to be an invalid date!");
+         else{
+            dayborn = akangirl[theday];
+         alert("Your akan name is" + dayborn);
+         }
+        }
+      </script>
+   <table width=420>
+         <tr>
+        <td align= center>
+        <form name=form>
+        </form<center>
+        <table border=2 cellspacing=0 cellpadding = 0bgcolorwhite>
+        <tr><td colspan=3align <center> <fontface="verdana,arial" size="-1">When were you born?</font></td></tr>
+        <tr><td align=center>
+        <select name="month">
+        <option value="" selected>Month
+        <option value="January">Jan
+        <option value="February">Feb
+        <option value="March">Mar
+        <option value="April">Apr
+        <option value="May">May
+        <option value="June">Jun
+        <option value="July">Jul
+        <option value="August">Aug
+        <option value="September">Sep
+        <option value="October">Oct
+        <option value="November">Nov
+        <option value="December">Dec
+        </select>
+        </td>
+        <td align=center>
+        <select name="day">
+        <option value="" selected>Day
+        <option value="1">01
+        <option value="2">02
+        <option value="3">03
+        <option value="4">04
+        <option value="5">05
+        <option value="6">06
+        <option value="7">07
+        <option value="8">08
+        <option value="9">09
+        <option value="10">10
+        <option value="11">11
+        <option value="12">12
+        <option value="13">13
+        <option value="14">14
+        <option value="15">15
+        <option value="16">16
+        <option value="17">17
+        <option value="18">18
+        <option value="19">19
+        <option value="20">20
+        <option value="21">21
+        <option value="22">22
+        <option value="23">23
+        <option value="24">24
+        <option value="25">25
+        <option value="26">26
+        <option value="27">27
+        <option value="28">28
+        <option value="29">29
+        <option value="30">30
+        <option value="31">31
+      </select>
+      </td>
+      <td align=center>
+      <input type=text name=year value="19" size=4 maxlength=4        
+      </td></tr>
+      </table><p>
+     <input type=button value="Calculate" onClick="myFunction()">
+    </center>
+      </form>
+  </body>
+</html>
